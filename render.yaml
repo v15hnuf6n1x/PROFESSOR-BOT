@@ -1,0 +1,27 @@
+services:
+  - type: web
+    plan: free
+    name: Mr.v 
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python3 bot.py
+    repo: https://github.com/v15hnuf6n1x/PROFESSOR-BOT.git      
+    branch: main
+    envVars:
+      - key: BOT_TOKEN 
+        sync: true
+      - key: API_ID 
+        sync: true
+      - key: API_HASH
+        sync: true
+      - key: ADMINS
+        sync: true
+      - key: DATABASE_NAME
+        sync: true
+      - key: DATABASE_URI
+        sync: true
+      - key: PICS
+        sync: false
+      - key: LOG_CHANNEL
+        sync: false    
+    autoDeploy: false
